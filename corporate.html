@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+<title>Wasamu Photography</title>   
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+ <body>
+
+    <!-----sub-menu------------------------->
+    
+    <section class="Corporate-header">
+        <nav>
+        <div class="nav-links" id="navLinks">
+          <div class="icon-1">
+
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            </div>
+
+           <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="gallery.html"><i class="fa fa-picture-o"></i>Gallery</a></li>
+
+             <!-----sub-menu------------------------->
+    
+            <li><a href="service.html"><i class="fa fa-clone"></i>Service</a>
+
+              <div class="sub-menu">
+                <ul>
+                 <li><a href="corporate.html">Corporate shoots</a></li>
+                 <li><a href="graduation.html">Graduation shoots</a></li>
+                 <li> <a href="birthday.html">Birthday shoots</a></li>
+                 <li> <a href="baby.html">Baby shoots</a></li>
+                 
+                </ul>
+          
+               </div>
+            
+            </li>
+            <li><a href="about.html"><i class="fa fa-user"></i>About</a></li>
+            <li><a href="contact.html"><i class="fa fa-phone"></i>Contact</a></li>
+           </ul> 
+        </div> 
+
+        <div class="icon-1">
+        
+          <i class="fa fa-bars" onclick="showMenu()"></i>
+  
+        </div> 
+
+        </nav>
+
+    
+  <div class="sub-container">
+  
+    <h2 class="title-corporate">Corporate shoot</h2>
+      
+    </div>
+
+    </section>
+
+    <div class="corp-col">
+      
+      <p>Capturing the essense of your brand through vibrant visuals.Elevate your corporate identity with professional photography that tells your story.</p>
+      <a href="service.html" class="red-btn">click for rates</a>
+
+  </div>
+    
+
+
+   
+    <div class="corporate-wrap">
+        <img src="images/back.png" id="backBtn">
+  
+        
+    <div class="corporate">
+      <div>
+      <span><img src="images/221044786.jpg"></span>
+      <span><img src="images/-421580799.jpg"></span>
+      <span><img src="images/718426801.jpg"></span>
+      
+    </div>  
+    <div>
+      <span><img src="images/-792674874.jpg"></span>
+      <span><img src="images/936545225.jpg"></span>
+      <span><img src="images/-963839081.jpg"></span>
+     
+    </div>
+    <div>
+      <span><img src="images/1304203797.jpg"></span>
+      <span><img src="images/1438696392.jpg"></span>
+      <span><img src="images/1620515056.jpg"></span>
+     </div>
+    </div>
+        <img src="images/next.png" id="nextBtn">
+  
+      </div>
+      
+  
+  
+       
+    
+
+
+     
+  <!----------footer---------->
+    
+  <section class="footer">
+    <hr>
+   <h2>Follow Us For Updates</h2>
+   <div class="icons">
+        <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-linkedin"></i>
+          
+       </div>
+       <p>Made with <i class="fa fa-heart-o"></i> by wasamu photography </p>
+       
+       
+   </section>
+<!-------js for enabling horzontal scrolling---->
+<script>
+
+    let scrollcontainer=document.querySelector(".corporate");
+    let backBtn=document.getElementById("backBtn");
+    let nextBtn=document.getElementById("nextBtn");
+
+    scrollcontainer.addEventListener("wheel", (evt)=> {
+        evt.preventDefault();
+        scrollcontainer.scrollLeft += evt.deltaY;
+        scrollcontainer.style.scrollBehavior = "auto";
+    });
+
+    nextBtn.addEventListener("click", ()=>{
+        scrollcontainer.style.scrollBehavior = "smooth";
+        scrollcontainer.scrollLeft += 900;
+    });
+
+    backBtn.addEventListener("click", ()=>{
+        scrollcontainer.style.scrollBehavior = "smooth";
+        scrollcontainer.scrollLeft -=900;
+    });
+</script>
+
+
+<!-------js for toggle menu---->
+<script>
+var navLinks= document.getElementById("navLinks");
+function showMenu()
+{
+navLinks.style.right="0"; 
+}
+function hideMenu()
+{
+navLinks.style.right="-200px";
+}
+</script>
+
+
+
+ </body>
+</html>

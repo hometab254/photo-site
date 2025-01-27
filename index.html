@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+<title>Wasamu Photography</title>   
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+ <body>
+
+    <!-----sub-menu------------------------->
+    
+    <section class="header">
+        <nav>
+        <div class="nav-links" id="navLinks">
+
+          <div class="icon-1">
+
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          </div>
+
+           <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="gallery.html"><i class="fa fa-picture-o"></i>Gallery</a></li>
+
+             <!-----sub-menu------------------------->
+    
+            <li><a href="service.html"><i class="fa fa-clone"></i>Services</a>
+
+              <div class="sub-menu">
+                <ul>
+                 <li><a href="corporate.html">Corporate shoots</a></li>
+                 <li><a href="graduation.html">Graduation shoots</a></li>
+                 <li> <a href="birthday.html">Birthday shoots</a></li>
+                 <li> <a href="baby.html">Baby shoots</a></li>
+                 
+                </ul>
+          
+               </div>
+            
+            </li>
+            <li><a href="about.html"><i class="fa fa-user"></i>About</a></li>
+            <li><a href="contact.html"><i class="fa fa-phone"></i>Contact</a></li>
+
+           </ul> 
+
+        </div> 
+
+        <div class="icon-1">
+        
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+
+      </div> 
+
+        </nav>
+
+
+   
+
+  <div class="text-box">
+  <h1>WORLD CLASS<br><span>PHOTOGRAPHY</span></h1>
+   <p>Dive into amazing world of photography full of emotions, feelings,and creativity. see our world through our lens.</p>
+    <a href="gallery.html" class="hero-btn">READ MORE</a>
+  
+  </div>
+  
+  </section>
+  
+  <!-----------featured photos---->
+  <div class="photos">
+   <div class="small-container">
+  <div class="row">
+   
+   <div class="col-3">
+   <img src="images/-1790428960.jpg">
+    
+   </div>
+   
+   <div class="col-3">
+   <img src="images/1769219634.jpg">
+    
+   </div>
+   
+   <div class="col-3">
+   <img src="images/family.png">
+   
+    </div>
+   
+   </div>
+  
+  </div>
+
+   </div>
+   
+   <!----------Gallery------>
+  
+  
+   <div class="small-container">
+  
+  <h2 class="gallery-title">Gallery</h2>
+    
+  </div>
+  
+  <div class="full-img" id="fullImgBox">
+  <img src="images/couple.png" id="fullImg">
+   <span onclick="closeFullImg()">X</span>
+  
+  </div>
+  
+    <div class="img-gallery">
+     <img src="images/couple.png" onclick="openFullImg(this.src)">
+      
+     <img src="images/936545225.jpg" onclick="openFullImg(this.src)">
+    
+     <img src="images/two-1.png" onclick="openFullImg(this.src)">
+     
+     <img src="images/-834191326.jpg" onclick="openFullImg(this.src)">
+      
+     <img src="images/718426801.jpg" onclick="openFullImg(this.src)">
+      
+     <img src="images/735882148.jpg" onclick="openFullImg(this.src)">
+      
+     <img src="images/one-3.png" onclick="openFullImg(this.src)">
+    
+     <img src="images/one-4.png" onclick="openFullImg(this.src)">
+   
+     <img src="images/one-5.png" onclick="openFullImg(this.src)">
+     
+    </div>
+   
+
+
+      <!------------offer------->
+
+      <div class="offer">
+        <div class="small-container" >
+            <div class="row">
+            <div class="col-3">
+              <img src="images/-2056329597.jpg" class="offer-img">  
+                
+                </div>
+                
+                  <div class="col-2">
+                <p>Available on offer!!!.</p>
+                      <h1>corporate Shoot</h1>
+                      <small>10 photos @ksh 5,000</small><br>
+            
+                <a href="contact.html" class="btn">Book Now &#8594;</a>
+                </div>
+            
+            </div>
+             
+       </div>
+
+         </div>
+
+  
+  <!----------footer---------->
+    
+        <section class="footer">
+         <hr>
+        <h2>Follow Us For Updates</h2>
+        <div class="icons">
+             <i class="fa fa-facebook"></i>
+               <i class="fa fa-twitter"></i>
+               <i class="fa fa-instagram"></i>
+               <i class="fa fa-linkedin"></i>
+               
+            </div>
+            <p>Copyright2024-Made with <i class="fa fa-heart-o"></i> by wasamu photography </p>
+            
+            
+        </section>
+   
+
+  
+  <!-------js for toggle menu---->
+  <script>
+  var navLinks=document.getElementById("navLinks");
+  function showMenu()
+   {
+   navLinks.style.right="0"; 
+   }
+   function hideMenu()
+   {
+    navLinks.style.right="-200px";
+   }
+  </script>
+  
+  <!----------js for gallery view------>
+
+ <script>
+  var fullImgBox=document.getElementById("fullImgBox");
+  var fullImg=document.getElementById("fullImg");
+
+  function openFullImg(pic)
+  {
+   fullImgBox.style.display= "flex"; 
+   fullImg.src = pic;
+  }
+
+  function closeFullImg()
+  {
+   fullImgBox.style.display = "none"; 
+  }
+ </script>
+  
+  
+  
+  
+ </body>
+
+
+
+
+
+
+
+
+
+
+</html>
